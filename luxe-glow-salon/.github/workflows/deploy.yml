@@ -29,11 +29,11 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Setup Node
-  uses: actions/setup-node@v6
-  with:
-    node-version: lts/*
-    cache: npm
-    cache-dependency-path: luxe-glow-salon/package-lock.json
+        uses: actions/setup-node@v6
+        with:
+          node-version: lts/*
+          cache: npm
+          cache-dependency-path: luxe-glow-salon/package-lock.json
 
       - name: Install dependencies
         working-directory: luxe-glow-salon
