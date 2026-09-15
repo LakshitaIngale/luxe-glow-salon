@@ -32,12 +32,13 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: lts/*
-          cache: npm
 
       - name: Install dependencies
+        working-directory: ./luxe-glow-salon
         run: npm ci
 
       - name: Build
+        working-directory: ./luxe-glow-salon
         run: npm run build
 
       - name: Setup Pages
@@ -46,7 +47,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ./dist
+          path: ./luxe-glow-salon/dist
 
       - name: Deploy to GitHub Pages
         id: deployment
